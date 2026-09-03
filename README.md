@@ -1,6 +1,8 @@
 # React component for Avataaars
 
-The core React component for [Avataaars Generator](https://avataaars2.com/) updated by [Greg Schoppe](https://gschoppe.com), originally developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). 
+The core React component for [Avataaars Generator](https://avataaars2.com/).
+
+**Provenance.** This package is a fork of [`@gschoppe/avataaars`](https://github.com/gschoppe/avataaars) by [Greg Schoppe](https://gschoppe.com), which is itself a fork of the original React port by [Fang-Pen Lin](https://github.com/fangpenlin/avataaars), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). Maintained for the OzzyPie project. MIT, with all upstream copyright notices retained — see `LICENSE`.
 
 <p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
 
@@ -23,13 +25,13 @@ The core React component for [Avataaars Generator](https://avataaars2.com/) upda
 First, you need to install the avataaars component package, here you run
 
 ```bash
-yarn add @gschoppe/avataaars
+yarn add @firepenguindisopanda/avataaars
 ```
 
 or
 
 ```bash
-npm install @gschoppe/avataaars --save
+npm install @firepenguindisopanda/avataaars --save
 ```
 
 if you are using npm.
@@ -40,7 +42,7 @@ In your React app, import the Avataaar component and put it where you like it to
 
 ```jsx
 import React from 'react'
-import Avatar from '@gschoppe/avataaars'
+import Avatar from '@firepenguindisopanda/avataaars'
 
 export default function MyComponent() {
   return( 
@@ -69,7 +71,7 @@ To generate dynamic, visually balanced random avatars, you can use the built-in 
 
 ```jsx
 import React from 'react'
-import Avatar, { generateRandomAvataarProps } from '@gschoppe/avataaars'
+import Avatar, { generateRandomAvataarProps } from '@firepenguindisopanda/avataaars'
 
 export default function MyComponent() {
   // Generates complete, cohesive random options
@@ -91,7 +93,7 @@ To showcase individual pieces of the avatar you can use the Piece component, for
 
 ```jsx
 import React from 'react'
-import {Piece} from 'avataaars';
+import { Piece } from '@firepenguindisopanda/avataaars'
 
 export default function MyComponent() {
   return(
@@ -120,7 +122,7 @@ You can register custom colors, translucent colors (alpha), and linear or radial
 
 #### 1. Custom Hex or Color String
 ```javascript
-import { addPaletteColor, PALETTES } from '@gschoppe/avataaars'
+import { addPaletteColor, PALETTES } from '@firepenguindisopanda/avataaars'
 
 // Add solid color
 addPaletteColor(PALETTES.HAIR, 'Magenta', '#FF00FF')
@@ -162,12 +164,12 @@ addPaletteColor(PALETTES.BACKDROP, 'BlueGlow', {
 
 This is very much a work in progress. So far, Idle animations have only been added
 to a few of the various avatar components. To enable these animations, just
-import `@gschoppe/avataaars/dist/animations.css` in your component, like so:
+import `@firepenguindisopanda/avataaars/animations.css` in your component, like so:
 
 ```jsx
 import React from 'react'
-import Avatar from '@gschoppe/avataaars'
-import '@gschoppe/avataaars/dist/animations.css'
+import Avatar from '@firepenguindisopanda/avataaars'
+import '@firepenguindisopanda/avataaars/animations.css'
 
 export default function MyComponent() {
   return( 
@@ -196,11 +198,11 @@ export default function MyComponent() {
 If you are rendering raw SVGs directly (e.g. from a backend/REST service or custom compiler), you can still enable these beautiful animations:
 
 1. Ensure the root container group of your avatar SVG uses an ID ending in `-Avataaar` (this is the default behavior when rendering with the `animated` option set to `true`).
-2. Load the `@gschoppe/avataaars/dist/animations.css` stylesheet in your HTML document to apply the keyframes to your SVGs:
+2. Load the `@firepenguindisopanda/avataaars/animations.css` stylesheet in your HTML document to apply the keyframes to your SVGs:
 
 ```html
 <!-- Load the stylesheet in your HTML head -->
-<link rel="stylesheet" href="node_modules/@gschoppe/avataaars/dist/animations.css">
+<link rel="stylesheet" href="node_modules/@firepenguindisopanda/avataaars/dist/animations.css">
 ```
 
 
@@ -210,7 +212,7 @@ You can serialize any complete avatar configuration into a compact, URL-safe 15-
 
 ```jsx
 import React from 'react'
-import Avatar, { getAvatarHash, getAvatarConfigFromHash } from '@gschoppe/avataaars'
+import Avatar, { getAvatarHash, getAvatarConfigFromHash } from '@firepenguindisopanda/avataaars'
 
 export default function MyComponent() {
   // 1. Generate a stable 15-character shorthand hash

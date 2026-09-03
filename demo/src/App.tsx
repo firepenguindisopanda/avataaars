@@ -30,7 +30,7 @@ import {
   generateRandomAvataarProps as DistGenerateRandomAvataarProps,
   getAvatarHash as DistGetAvatarHash,
   getAvatarConfigFromHash as DistGetAvatarConfigFromHash
-} from '@gschoppe/avataaars'
+} from '@firepenguindisopanda/avataaars'
 
 const BUILT_IN_COLORS: Record<string, string[]> = {
   BACKDROP: ['Black', 'Blue01', 'Blue02', 'Blue03', 'Gray01', 'Gray02', 'Heather', 'PastelBlue', 'PastelGreen', 'PastelOrange', 'PastelRed', 'PastelYellow', 'Pink', 'Red', 'White'],
@@ -499,7 +499,7 @@ export const App: React.FC = () => {
       .map(([key, val]) => `  ${key}='${val}'`)
       .join('\n')
     const animProp = !enableAnimations ? '\n  animated={false}' : ''
-    return `import Avatar from '@gschoppe/avataaars'
+    return `import Avatar from '@firepenguindisopanda/avataaars'
 
 <Avatar
   style={{ width: '264px', height: '280px' }}${animProp}
@@ -533,7 +533,7 @@ ${propStrings}
         <div className='header-title-section'>
           <h1>Avataaars Sandbox</h1>
           <p style={{ maxWidth: '640px', lineHeight: 1.6 }}>
-            Demo page for the NPM library <a href='https://github.com/gschoppe/avataaars' target='_blank' rel='noreferrer'>@gschoppe/avataaars</a>, a modernized and enhanced version of the avataaars package by <a href='https://getavataaars.com/' target='_blank' rel='noreferrer'>fang pen-lin</a>. Build your own custom avataaars using the premium SVG art collection designed by <a href='https://twitter.com/pablostanley' target='_blank' rel='noreferrer'>Pablo Stanley</a>.
+            Demo page for the NPM library <a href='https://github.com/gschoppe/avataaars' target='_blank' rel='noreferrer'>@firepenguindisopanda/avataaars</a>, a modernized and enhanced version of the avataaars package by <a href='https://getavataaars.com/' target='_blank' rel='noreferrer'>fang pen-lin</a>. Build your own custom avataaars using the premium SVG art collection designed by <a href='https://twitter.com/pablostanley' target='_blank' rel='noreferrer'>Pablo Stanley</a>.
           </p>
         </div>
         <div className='header-controls'>
@@ -1072,9 +1072,9 @@ ${propStrings}
                     Import and render avatars synchronously in React 19 with no layout flickering.
                   </p>
                   <pre className='code-block' style={{ color: '#38bdf8' }}>
-                    {`import Avatar, { generateRandomAvataarProps } from '@gschoppe/avataaars'
+                    {`import Avatar, { generateRandomAvataarProps } from '@firepenguindisopanda/avataaars'
 // Import animation styles (optional)
-import '@gschoppe/avataaars/dist/animations.css'
+import '@firepenguindisopanda/avataaars/dist/animations.css'
 
 // 1. Static Configuration
 const App = () => (
@@ -1104,7 +1104,7 @@ const RandomApp = () => <Avatar {...randomProps} />`}
                   <h4 style={{ fontSize: '12.5px', fontWeight: 600, color: 'var(--text-heading)', margin: '0 0 4px 0' }}>React / Bundler Integration</h4>
                   <pre className='code-block' style={{ color: '#38bdf8', marginBottom: '12px' }}>
                     {`// 1. Import the animation CSS stylesheet
-import '@gschoppe/avataaars/dist/animations.css'
+import '@firepenguindisopanda/avataaars/dist/animations.css'
 
 // 2. Render with animated prop (true by default)
 const App = () => <Avatar animated={true} />`}
@@ -1115,7 +1115,7 @@ const App = () => <Avatar animated={true} />`}
                   </p>
                   <pre className='code-block' style={{ color: '#34d399' }}>
                     {`<!-- Load the animations.css stylesheet -->
-<link rel="stylesheet" href="node_modules/@gschoppe/avataaars/dist/animations.css">`}
+<link rel="stylesheet" href="node_modules/@firepenguindisopanda/avataaars/dist/animations.css">`}
                   </pre>
                 </div>
 
@@ -1131,7 +1131,7 @@ const App = () => <Avatar animated={true} />`}
                     {`import { 
   addPaletteColor, 
   PALETTES 
-} from '@gschoppe/avataaars'
+} from '@firepenguindisopanda/avataaars'
 
 // 1. Register a standard flat color
 addPaletteColor(PALETTES.HAIR, 'flatEmerald', '#10B981')
@@ -1163,7 +1163,7 @@ addPaletteColor(PALETTES.CLOTHES, 'mySunset', {
                     {`import { 
   getAvatarHash, 
   getAvatarConfigFromHash 
-} from '@gschoppe/avataaars'
+} from '@firepenguindisopanda/avataaars'
 
 // 1. Generate hash from a props config object
 const hash = getAvatarHash({

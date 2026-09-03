@@ -131,7 +131,7 @@ const App = () => {
             .filter(([_, val]) => val && val !== 'Blank' && val !== 'error')
             .map(([key, val]) => `  ${key}='${val}'`)
             .join('\n');
-        return `import Avatar from '@gschoppe/avataaars'
+        return `import Avatar from '@firepenguindisopanda/avataaars'
 
 <Avatar
   style={{ width: '264px', height: '280px' }}
