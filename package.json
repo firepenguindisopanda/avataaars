@@ -1,27 +1,59 @@
 {
-  "name": "@gschoppe/avataaars",
-  "version": "2.4.3",
-  "description": "React component for avataaars, updated with bugfixes, support for react 19, and new options.",
-  "main": "dist/index.js",
+  "name": "@firepenguindisopanda/avataaars",
+  "version": "2.5.0",
+  "type": "module",
+  "description": "React avataaars component. Fork of @gschoppe/avataaars, itself a fork of fangpenlin/avataaars, maintained for the OzzyPie project with Caribbean skin tones and styling.",
+  "keywords": [
+    "react",
+    "avatar",
+    "avataaars",
+    "svg",
+    "avatar-generator"
+  ],
+  "homepage": "https://github.com/firepenguindisopanda/avataaars#readme",
+  "bugs": {
+    "url": "https://github.com/firepenguindisopanda/avataaars/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firepenguindisopanda/avataaars.git"
+  },
+  "license": "MIT",
+  "author": "firepenguindisopanda (https://github.com/firepenguindisopanda)",
+  "contributors": [
+    "Pablo Stanley (original artwork, https://avataaars.com)",
+    "Fang-Pen Lin (original React port, https://github.com/fangpenlin/avataaars)",
+    "Greg Schoppe (React 19 support and new options, https://github.com/gschoppe/avataaars)"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "style": "dist/animation.css",
+  "style": "dist/animations.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./animations.css": "./dist/animations.css",
+    "./dist/animations.css": "./dist/animations.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rimraf dist/",
     "copy-styles": "copyfiles -u 1 src/*.css dist/",
-    "build": "npm run clean && tsc && npm run copy-styles"
+    "build": "tsup && npm run copy-styles"
   },
-  "keywords": [
-    "react",
-    "avatar"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/gschoppe/avataaars.git"
-  },
-  "author": "Greg Schoppe <contact@gschoppe.com> (https://gschoppe.com)",
-  "license": "MIT",
   "peerDependencies": {
-    "react": "^19.0.0"
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.9",
@@ -31,6 +63,7 @@
     "tslint": "^6.1.3",
     "tslint-config-standard": "^9.0.0",
     "tslint-react": "^5.0.0",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.2"
   },
   "dependencies": {

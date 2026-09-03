@@ -1,9 +1,76 @@
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
 // src/index.tsx
-import * as React22 from "react";
-import { useMemo as useMemo2 } from "react";
+var index_exports = {};
+__export(index_exports, {
+  ACCESSORIES_TYPES: () => ACCESSORIES_TYPES,
+  Avatar: () => avatar_default,
+  AvatarComponent: () => AvatarComponent,
+  BACKDROP_COLORS: () => BACKDROP_COLORS,
+  BACKDROP_TYPES: () => BACKDROP_TYPES,
+  CLOTHE_COLORS: () => CLOTHE_COLORS,
+  CLOTHE_TYPES: () => CLOTHE_TYPES,
+  DEFAULT_AVATAR_PROPS: () => DEFAULT_AVATAR_PROPS,
+  EYEBROW_TYPES: () => EYEBROW_TYPES,
+  EYE_TYPES: () => EYE_TYPES,
+  FACIAL_HAIR_COLORS: () => FACIAL_HAIR_COLORS,
+  FACIAL_HAIR_TYPES: () => FACIAL_HAIR_TYPES,
+  GRAPHIC_TYPES: () => GRAPHIC_TYPES,
+  HAIR_COLORS: () => HAIR_COLORS,
+  HASH_ORDER: () => HASH_ORDER,
+  HAT_COLORS: () => HAT_COLORS,
+  MOUTH_TYPES: () => MOUTH_TYPES,
+  Option: () => Option,
+  OptionContext: () => OptionContext,
+  OptionsContext: () => OptionsContext,
+  PALETTES: () => PALETTES,
+  Piece: () => Piece,
+  SKIN_COLORS: () => SKIN_COLORS,
+  TOP_TYPES: () => TOP_TYPES,
+  addPaletteColor: () => addPaletteColor,
+  allOptions: () => allOptions,
+  default: () => index_default,
+  generateRandomAvataarProps: () => generateRandomAvataarProps,
+  getAvatarConfigFromHash: () => getAvatarConfigFromHash,
+  getAvatarHash: () => getAvatarHash,
+  getColorFamily: () => getColorFamily,
+  getOptionList: () => getOptionList,
+  registerGradient: () => registerGradient,
+  registeredGradients: () => registeredGradients,
+  removePaletteColor: () => removePaletteColor
+});
+module.exports = __toCommonJS(index_exports);
+var React22 = __toESM(require("react"), 1);
+var import_react10 = require("react");
 
 // src/avatar/index.tsx
-import React20, { useState as useState2, useEffect as useEffect2, useContext as useContext2, useCallback as useCallback2, useMemo } from "react";
+var import_react8 = __toESM(require("react"), 1);
 
 // src/uniqueId.ts
 var idCounter = 0;
@@ -13,7 +80,7 @@ function uniqueId(prefix = "") {
 }
 
 // src/avatar/backdrop/index.tsx
-import React13 from "react";
+var import_react7 = __toESM(require("react"), 1);
 
 // src/options/Option.ts
 var Option = class {
@@ -30,8 +97,8 @@ var Option = class {
 };
 
 // src/options/OptionContext.ts
-import { createContext } from "react";
-var OptionsContext = createContext(null);
+var import_react = require("react");
+var OptionsContext = (0, import_react.createContext)(null);
 var OptionContext = class {
   constructor(options) {
     this.stateChangeListeners = /* @__PURE__ */ new Set();
@@ -140,7 +207,7 @@ var OptionContext = class {
 };
 
 // src/options/Selector.tsx
-import React, { useContext, useEffect, useState, useCallback } from "react";
+var import_react2 = __toESM(require("react"), 1);
 function getComponentOptionValue(component) {
   const optionValue = component.optionValue;
   if (!optionValue) {
@@ -150,10 +217,10 @@ function getComponentOptionValue(component) {
 }
 var Selector = (props) => {
   const { option, children, defaultOption } = props;
-  const context = useContext(OptionsContext);
-  const [, setTick] = useState(0);
-  const forceUpdate = useCallback(() => setTick((tick) => tick + 1), []);
-  useEffect(() => {
+  const context = (0, import_react2.useContext)(OptionsContext);
+  const [, setTick] = (0, import_react2.useState)(0);
+  const forceUpdate = (0, import_react2.useCallback)(() => setTick((tick) => tick + 1), []);
+  (0, import_react2.useEffect)(() => {
     if (!context) return;
     const defaultValue = typeof defaultOption === "string" ? defaultOption : getComponentOptionValue(defaultOption);
     context.addStateChangeListener(forceUpdate);
@@ -167,11 +234,11 @@ var Selector = (props) => {
       context.optionExit(option.key);
     };
   }, [context, option.key, defaultOption, forceUpdate]);
-  const serializedValues = React.Children.map(
+  const serializedValues = import_react2.default.Children.map(
     children,
     (child) => getComponentOptionValue(child.type)
   )?.join(",") || "";
-  useEffect(() => {
+  (0, import_react2.useEffect)(() => {
     if (!context) return;
     const values = serializedValues ? serializedValues.split(",") : [];
     if (new Set(values).size !== values.length) {
@@ -182,7 +249,7 @@ var Selector = (props) => {
   if (!context) return null;
   const value = context.getValue(option.key);
   let result = null;
-  React.Children.forEach(children, (child) => {
+  import_react2.default.Children.forEach(children, (child) => {
     if (getComponentOptionValue(child.type) === value) {
       result = child;
     }
@@ -271,13 +338,13 @@ var allOptions = [
 ];
 
 // src/avatar/makeOptionComponent.tsx
-import React12 from "react";
+var import_react6 = __toESM(require("react"), 1);
 
 // src/avatar/SvgDictionaryRenderer.tsx
-import React11 from "react";
+var import_react5 = __toESM(require("react"), 1);
 
 // src/avatar/top/facialHair/index.tsx
-import * as React2 from "react";
+var React2 = __toESM(require("react"), 1);
 var Blank = () => null;
 var anyBlank = Blank;
 anyBlank.displayName = "Blank";
@@ -294,7 +361,7 @@ var FacialHair = class extends React2.Component {
 };
 
 // src/avatar/top/HairColor.tsx
-import * as React3 from "react";
+var React3 = __toESM(require("react"), 1);
 var hairColorPalette = /* @__PURE__ */ new Map();
 function makeHairColor(name, color) {
   class ColorComponent extends React3.Component {
@@ -335,7 +402,7 @@ var HairColor = class extends React3.Component {
 };
 
 // src/avatar/top/accessories/index.tsx
-import * as React4 from "react";
+var React4 = __toESM(require("react"), 1);
 var Blank2 = () => null;
 var anyBlank2 = Blank2;
 anyBlank2.displayName = "Blank";
@@ -353,20 +420,20 @@ var Accessories = class extends React4.Component {
 };
 
 // src/avatar/backdrop/BackdropColor.tsx
-import React5 from "react";
+var import_react3 = __toESM(require("react"), 1);
 var backdropColorPalette = /* @__PURE__ */ new Map();
 function makeBackdropColor(name, color) {
-  class ColorComponent extends React5.Component {
+  class ColorComponent extends import_react3.default.Component {
     render() {
       const resolvedColor = color.replace(/{uid}/g, this.props.uid);
-      return /* @__PURE__ */ React5.createElement(
+      return /* @__PURE__ */ import_react3.default.createElement(
         "g",
         {
           id: `${this.props.uid}-BackdropColor/${name}`,
           mask: `url(#${this.props.uid}-Backdrop-Color-Mask)`,
           fill: resolvedColor
         },
-        /* @__PURE__ */ React5.createElement("rect", { id: `${this.props.uid}-\u{1F58D}Color`, x: "0", y: "0", width: "280", height: "280" })
+        /* @__PURE__ */ import_react3.default.createElement("rect", { id: `${this.props.uid}-\u{1F58D}Color`, x: "0", y: "0", width: "280", height: "280" })
       );
     }
   }
@@ -391,16 +458,16 @@ makeBackdropColor("PastelYellow", "#FFFFB1");
 makeBackdropColor("Pink", "#FF488E");
 makeBackdropColor("Red", "#FF5C5C");
 makeBackdropColor("White", "#FFFFFF");
-var BackdropColor = class extends React5.Component {
+var BackdropColor = class extends import_react3.default.Component {
   render() {
-    return /* @__PURE__ */ React5.createElement(Selector_default, { option: BackdropColorOption, defaultOption: this.props.defaultColor || "PastelBlue" }, Array.from(backdropColorPalette.values()).map((ColorComponent, index) => {
-      return /* @__PURE__ */ React5.createElement(ColorComponent, { key: index, uid: this.props.uid });
+    return /* @__PURE__ */ import_react3.default.createElement(Selector_default, { option: BackdropColorOption, defaultOption: this.props.defaultColor || "PastelBlue" }, Array.from(backdropColorPalette.values()).map((ColorComponent, index) => {
+      return /* @__PURE__ */ import_react3.default.createElement(ColorComponent, { key: index, uid: this.props.uid });
     }));
   }
 };
 
 // src/avatar/clothes/ClotheColor.tsx
-import * as React6 from "react";
+var React6 = __toESM(require("react"), 1);
 var clotheColorPalette = /* @__PURE__ */ new Map();
 function makeClotheColor(name, color) {
   class ColorComponent extends React6.Component {
@@ -446,7 +513,7 @@ var ClotheColor = class extends React6.Component {
 };
 
 // src/avatar/top/HatColor.tsx
-import * as React7 from "react";
+var React7 = __toESM(require("react"), 1);
 var hatColorPalette = /* @__PURE__ */ new Map();
 function makeHatColor(name, color) {
   class ColorComponent extends React7.Component {
@@ -492,20 +559,20 @@ var Colors = class extends React7.Component {
 };
 
 // src/avatar/Skin.tsx
-import React8 from "react";
+var import_react4 = __toESM(require("react"), 1);
 var skinColorPalette = /* @__PURE__ */ new Map();
 function makeSkinColor(name, color) {
-  class ColorComponent extends React8.Component {
+  class ColorComponent extends import_react4.default.Component {
     render() {
       const resolvedColor = color.replace(/{uid}/g, this.props.uid);
-      return /* @__PURE__ */ React8.createElement(
+      return /* @__PURE__ */ import_react4.default.createElement(
         "g",
         {
           id: `${this.props.uid}-SkinColor/${name}`,
           mask: `url(#${this.props.uid}-Skin-Color-Mask)`,
           fill: resolvedColor
         },
-        /* @__PURE__ */ React8.createElement("g", { transform: "translate(0.000000, 0.000000)", id: "Color" }, /* @__PURE__ */ React8.createElement("rect", { x: "0", y: "0", width: "264", height: "280" }))
+        /* @__PURE__ */ import_react4.default.createElement("g", { transform: "translate(0.000000, 0.000000)", id: "Color" }, /* @__PURE__ */ import_react4.default.createElement("rect", { x: "0", y: "0", width: "264", height: "280" }))
       );
     }
   }
@@ -522,14 +589,14 @@ makeSkinColor("Light", "#EDB98A");
 makeSkinColor("Brown", "#D08B5B");
 makeSkinColor("DarkBrown", "#AE5D29");
 makeSkinColor("Black", "#614335");
-var Skin = class extends React8.Component {
+var Skin = class extends import_react4.default.Component {
   render() {
-    return /* @__PURE__ */ React8.createElement(Selector_default, { option: SkinOption, defaultOption: "Tanned" }, Array.from(skinColorPalette.values()).map((ColorComponent, index) => /* @__PURE__ */ React8.createElement(ColorComponent, { key: index, uid: this.props.uid })));
+    return /* @__PURE__ */ import_react4.default.createElement(Selector_default, { option: SkinOption, defaultOption: "Tanned" }, Array.from(skinColorPalette.values()).map((ColorComponent, index) => /* @__PURE__ */ import_react4.default.createElement(ColorComponent, { key: index, uid: this.props.uid })));
   }
 };
 
 // src/avatar/clothes/Graphics.tsx
-import * as React9 from "react";
+var React9 = __toESM(require("react"), 1);
 var Skull = makeOptionComponent("CLOTHES", "Skull");
 var SkullOutline = makeOptionComponent("CLOTHES", "SkullOutline");
 var Bat = makeOptionComponent("CLOTHES", "Bat");
@@ -548,7 +615,7 @@ var Graphics = class extends React9.Component {
 };
 
 // src/avatar/top/facialHair/FacialHairColor.tsx
-import * as React10 from "react";
+var React10 = __toESM(require("react"), 1);
 var facialHairColorPalette = /* @__PURE__ */ new Map();
 function makeFacialHairColor(name, color) {
   class ColorComponent extends React10.Component {
@@ -665,7 +732,7 @@ var SvgDictionaryRenderer = (props) => {
   switch (type) {
     case "":
     case "React.Fragment":
-      return /* @__PURE__ */ React11.createElement(React11.Fragment, null, nodeChildren && nodeChildren.map((child, index) => /* @__PURE__ */ React11.createElement(
+      return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, nodeChildren && nodeChildren.map((child, index) => /* @__PURE__ */ import_react5.default.createElement(
         SvgDictionaryRenderer,
         {
           key: index,
@@ -675,35 +742,35 @@ var SvgDictionaryRenderer = (props) => {
         children
       )));
     case "Children":
-      return /* @__PURE__ */ React11.createElement(React11.Fragment, null, children);
+      return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, children);
     case "FacialHair":
-      return /* @__PURE__ */ React11.createElement(FacialHair, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(FacialHair, { uid });
     case "HairColor":
-      return /* @__PURE__ */ React11.createElement(HairColor, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(HairColor, { uid });
     case "Accessories":
-      return /* @__PURE__ */ React11.createElement(Accessories, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(Accessories, { uid });
     case "BackdropColor":
-      return /* @__PURE__ */ React11.createElement(BackdropColor, { uid, defaultColor: resolvedProps.defaultColor });
+      return /* @__PURE__ */ import_react5.default.createElement(BackdropColor, { uid, defaultColor: resolvedProps.defaultColor });
     case "ClotheColor":
     case "Colors":
-      return /* @__PURE__ */ React11.createElement(ClotheColor, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(ClotheColor, { uid });
     case "HatColor":
-      return /* @__PURE__ */ React11.createElement(Colors, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(Colors, { uid });
     case "Skin":
-      return /* @__PURE__ */ React11.createElement(Skin, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(Skin, { uid });
     case "Graphics":
-      return /* @__PURE__ */ React11.createElement(Graphics, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(Graphics, { uid });
     case "FacialHairColor":
-      return /* @__PURE__ */ React11.createElement(FacialHairColor, { uid });
+      return /* @__PURE__ */ import_react5.default.createElement(FacialHairColor, { uid });
     case "text":
       const txt = resolvedProps.text || "";
       if (txt.trim().startsWith("{/*") && txt.trim().endsWith("*/}")) {
         return null;
       }
-      return /* @__PURE__ */ React11.createElement(React11.Fragment, null, txt);
+      return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, txt);
     default:
       const Tag = type;
-      return /* @__PURE__ */ React11.createElement(Tag, { ...resolvedProps }, nodeChildren && nodeChildren.map((child, index) => /* @__PURE__ */ React11.createElement(
+      return /* @__PURE__ */ import_react5.default.createElement(Tag, { ...resolvedProps }, nodeChildren && nodeChildren.map((child, index) => /* @__PURE__ */ import_react5.default.createElement(
         SvgDictionaryRenderer,
         {
           key: index,
@@ -11759,7 +11826,7 @@ function makeOptionComponent(category, name) {
     if (!node) {
       throw new Error(`SVG node not found in dictionary for category: ${category}, name: ${name}`);
     }
-    return /* @__PURE__ */ React12.createElement(SvgDictionaryRenderer_default, { node, uid: props.uid }, props.children);
+    return /* @__PURE__ */ import_react6.default.createElement(SvgDictionaryRenderer_default, { node, uid: props.uid }, props.children);
   };
   const anyComp = OptionComp;
   anyComp.displayName = name;
@@ -11774,14 +11841,14 @@ anyNoBackdrop.displayName = "NoBackdrop";
 anyNoBackdrop.optionValue = "NoBackdrop";
 var Circle = makeOptionComponent("BACKDROP", "Circle");
 var Diamond2 = makeOptionComponent("BACKDROP", "Diamond");
-var Backdrop = class extends React13.Component {
+var Backdrop = class extends import_react7.default.Component {
   render() {
-    return /* @__PURE__ */ React13.createElement(Selector_default, { defaultOption: Diamond2, option: BackdropOption }, /* @__PURE__ */ React13.createElement(NoBackdrop, { uid: this.props.uid }), /* @__PURE__ */ React13.createElement(Circle, { uid: this.props.uid }), /* @__PURE__ */ React13.createElement(Diamond2, { uid: this.props.uid }));
+    return /* @__PURE__ */ import_react7.default.createElement(Selector_default, { defaultOption: Diamond2, option: BackdropOption }, /* @__PURE__ */ import_react7.default.createElement(NoBackdrop, { uid: this.props.uid }), /* @__PURE__ */ import_react7.default.createElement(Circle, { uid: this.props.uid }), /* @__PURE__ */ import_react7.default.createElement(Diamond2, { uid: this.props.uid }));
   }
 };
 
 // src/avatar/clothes/index.tsx
-import * as React14 from "react";
+var React14 = __toESM(require("react"), 1);
 var BlazerShirt = makeOptionComponent("CLOTHES", "BlazerShirt");
 var BlazerSweater = makeOptionComponent("CLOTHES", "BlazerSweater");
 var CollarSweater = makeOptionComponent("CLOTHES", "CollarSweater");
@@ -11798,10 +11865,10 @@ var Clothes = class extends React14.Component {
 };
 
 // src/avatar/face/index.tsx
-import * as React18 from "react";
+var React18 = __toESM(require("react"), 1);
 
 // src/avatar/face/eyebrow/index.tsx
-import * as React15 from "react";
+var React15 = __toESM(require("react"), 1);
 var Angry = makeOptionComponent("EYEBROW", "Angry");
 var AngryNatural = makeOptionComponent("EYEBROW", "AngryNatural");
 var Default = makeOptionComponent("EYEBROW", "Default");
@@ -11821,7 +11888,7 @@ var Eyebrow = class extends React15.Component {
 };
 
 // src/avatar/face/eyes/index.tsx
-import * as React16 from "react";
+var React16 = __toESM(require("react"), 1);
 var Close = makeOptionComponent("EYES", "Close");
 var Cry = makeOptionComponent("EYES", "Cry");
 var Default2 = makeOptionComponent("EYES", "Default");
@@ -11841,7 +11908,7 @@ var Eyes = class extends React16.Component {
 };
 
 // src/avatar/face/mouth/index.tsx
-import * as React17 from "react";
+var React17 = __toESM(require("react"), 1);
 var Concerned = makeOptionComponent("MOUTH", "Concerned");
 var Default3 = makeOptionComponent("MOUTH", "Default");
 var Disbelief = makeOptionComponent("MOUTH", "Disbelief");
@@ -11874,7 +11941,7 @@ var Face = class extends React18.Component {
 };
 
 // src/avatar/top/index.tsx
-import * as React19 from "react";
+var React19 = __toESM(require("react"), 1);
 var Eyepatch = makeOptionComponent("TOP", "Eyepatch");
 var Hat = makeOptionComponent("TOP", "Hat");
 var Hijab = makeOptionComponent("TOP", "Hijab");
@@ -11920,16 +11987,16 @@ var Top = class extends React19.Component {
 // src/avatar/index.tsx
 var Avatar = (props) => {
   const { className, style, uid: propUid, animationDelay: propAnimationDelay, animated = true } = props;
-  const [uid, setUid] = useState2(propUid || "error");
-  const [animationDelay, setAnimationDelay] = useState2(propAnimationDelay || "0s");
-  useEffect2(() => {
+  const [uid, setUid] = (0, import_react8.useState)(propUid || "error");
+  const [animationDelay, setAnimationDelay] = (0, import_react8.useState)(propAnimationDelay || "0s");
+  (0, import_react8.useEffect)(() => {
     if (propUid) {
       setUid(propUid);
     } else if (uid === "error") {
       setUid(uniqueId("avatar-"));
     }
   }, [propUid]);
-  useEffect2(() => {
+  (0, import_react8.useEffect)(() => {
     if (propAnimationDelay) {
       setAnimationDelay(propAnimationDelay);
     } else if (animationDelay === "0s") {
@@ -11937,17 +12004,17 @@ var Avatar = (props) => {
       setAnimationDelay(`${delay}s`);
     }
   }, [propAnimationDelay]);
-  const context = useContext2(OptionsContext);
-  const [tick, setTick] = useState2(0);
-  const forceUpdate = useCallback2(() => setTick((t) => t + 1), []);
-  useEffect2(() => {
+  const context = (0, import_react8.useContext)(OptionsContext);
+  const [tick, setTick] = (0, import_react8.useState)(0);
+  const forceUpdate = (0, import_react8.useCallback)(() => setTick((t) => t + 1), []);
+  (0, import_react8.useEffect)(() => {
     if (!context) return;
     context.addStateChangeListener(forceUpdate);
     return () => {
       context.removeStateChangeListener(forceUpdate);
     };
   }, [context, forceUpdate]);
-  const hash = useMemo(() => {
+  const hash = (0, import_react8.useMemo)(() => {
     if (!context) return "";
     const config = {};
     HASH_ORDER.forEach((key) => {
@@ -11958,7 +12025,7 @@ var Avatar = (props) => {
     });
     return getAvatarHash(config);
   }, [context, tick]);
-  return /* @__PURE__ */ React20.createElement(
+  return /* @__PURE__ */ import_react8.default.createElement(
     "svg",
     {
       "data-uid": uid,
@@ -11971,9 +12038,9 @@ var Avatar = (props) => {
       xmlns: "http://www.w3.org/2000/svg",
       xmlnsXlink: "http://www.w3.org/1999/xlink"
     },
-    /* @__PURE__ */ React20.createElement("desc", null, "Created with getavataaars.com"),
-    hash && /* @__PURE__ */ React20.createElement("g", { dangerouslySetInnerHTML: { __html: `<!-- Avatar Hash: ${hash} -->` } }),
-    /* @__PURE__ */ React20.createElement("defs", null, /* @__PURE__ */ React20.createElement(
+    /* @__PURE__ */ import_react8.default.createElement("desc", null, "Created with getavataaars.com"),
+    hash && /* @__PURE__ */ import_react8.default.createElement("g", { dangerouslySetInnerHTML: { __html: `<!-- Avatar Hash: ${hash} -->` } }),
+    /* @__PURE__ */ import_react8.default.createElement("defs", null, /* @__PURE__ */ import_react8.default.createElement(
       "path",
       {
         d: "M124,144.610951 L124,163 L128,163 L128,163 C167.764502,163 200,195.235498 200,235 L200,244 L0,244 L0,235 C-4.86974701e-15,195.235498 32.235498,163 72,163 L72,163 L76,163 L76,144.610951 C58.7626345,136.422372 46.3722246,119.687011 44.3051388,99.8812385 C38.4803105,99.0577866 34,94.0521096 34,88 L34,74 C34,68.0540074 38.3245733,63.1180731 44,62.1659169 L44,56 L44,56 C44,25.072054 69.072054,5.68137151e-15 100,0 L100,0 L100,0 C130.927946,-5.68137151e-15 156,25.072054 156,56 L156,62.1659169 C161.675427,63.1180731 166,68.0540074 166,74 L166,88 C166,94.0521096 161.51969,99.0577866 155.694861,99.8812385 C153.627775,119.687011 141.237365,136.422372 124,144.610951 Z",
@@ -11982,7 +12049,7 @@ var Avatar = (props) => {
     ), Array.from(registeredGradients.entries()).map(([gradName, config]) => {
       const Tag = config.type === "radial" ? "radialGradient" : "linearGradient";
       const id = `${uid}-gradient-${gradName}`;
-      return /* @__PURE__ */ React20.createElement(Tag, { key: gradName, id, ...config.attrs }, config.stops.map((stop, i) => /* @__PURE__ */ React20.createElement(
+      return /* @__PURE__ */ import_react8.default.createElement(Tag, { key: gradName, id, ...config.attrs }, config.stops.map((stop, i) => /* @__PURE__ */ import_react8.default.createElement(
         "stop",
         {
           key: i,
@@ -11992,7 +12059,7 @@ var Avatar = (props) => {
         }
       )));
     })),
-    /* @__PURE__ */ React20.createElement(
+    /* @__PURE__ */ import_react8.default.createElement(
       "g",
       {
         id: `${uid}-Avataaar${animated ? "" : "-Static"}`,
@@ -12002,13 +12069,13 @@ var Avatar = (props) => {
         fillRule: "evenodd",
         style: { animationDelay }
       },
-      /* @__PURE__ */ React20.createElement(
+      /* @__PURE__ */ import_react8.default.createElement(
         "g",
         {
           transform: "translate(-825.000000, -1100.000000)",
           id: `${uid}-Avataaar/Backdrop`
         },
-        /* @__PURE__ */ React20.createElement("g", { transform: "translate(825.000000, 1100.000000)" }, /* @__PURE__ */ React20.createElement(Backdrop, { uid }), /* @__PURE__ */ React20.createElement(
+        /* @__PURE__ */ import_react8.default.createElement("g", { transform: "translate(825.000000, 1100.000000)" }, /* @__PURE__ */ import_react8.default.createElement(Backdrop, { uid }), /* @__PURE__ */ import_react8.default.createElement(
           "g",
           {
             id: `${uid}-Person`,
@@ -12016,7 +12083,7 @@ var Avatar = (props) => {
             fillRule: "evenodd",
             mask: `url(#${uid}-Backdrop-Mask)`
           },
-          /* @__PURE__ */ React20.createElement("g", { id: `${uid}-Body`, transform: "translate(32.000000, 36.000000)" }, /* @__PURE__ */ React20.createElement("mask", { id: `${uid}-Skin-Color-Mask`, fill: "white" }, /* @__PURE__ */ React20.createElement("use", { xlinkHref: `#${uid}-path-skin` })), /* @__PURE__ */ React20.createElement("use", { fill: "#D0C6AC", xlinkHref: `#${uid}-path-skin` }), /* @__PURE__ */ React20.createElement(Skin, { uid }), /* @__PURE__ */ React20.createElement(
+          /* @__PURE__ */ import_react8.default.createElement("g", { id: `${uid}-Body`, transform: "translate(32.000000, 36.000000)" }, /* @__PURE__ */ import_react8.default.createElement("mask", { id: `${uid}-Skin-Color-Mask`, fill: "white" }, /* @__PURE__ */ import_react8.default.createElement("use", { xlinkHref: `#${uid}-path-skin` })), /* @__PURE__ */ import_react8.default.createElement("use", { fill: "#D0C6AC", xlinkHref: `#${uid}-path-skin` }), /* @__PURE__ */ import_react8.default.createElement(Skin, { uid }), /* @__PURE__ */ import_react8.default.createElement(
             "path",
             {
               d: "M156,79 L156,102 C156,132.927946 130.927946,158 100,158 C69.072054,158 44,132.927946 44,102 L44,79 L44,94 C44,124.927946 69.072054,150 100,150 C130.927946,150 156,124.927946 156,94 L156,79 Z",
@@ -12026,9 +12093,9 @@ var Avatar = (props) => {
               mask: `url(#${uid}-Skin-Color-Mask)`
             }
           )),
-          /* @__PURE__ */ React20.createElement(Clothes, { uid }),
-          /* @__PURE__ */ React20.createElement(Face, { uid }),
-          /* @__PURE__ */ React20.createElement(Top, { uid }, /* @__PURE__ */ React20.createElement(Accessories, { uid }))
+          /* @__PURE__ */ import_react8.default.createElement(Clothes, { uid }),
+          /* @__PURE__ */ import_react8.default.createElement(Face, { uid }),
+          /* @__PURE__ */ import_react8.default.createElement(Top, { uid }, /* @__PURE__ */ import_react8.default.createElement(Accessories, { uid }))
         ))
       )
     )
@@ -12037,12 +12104,12 @@ var Avatar = (props) => {
 var avatar_default = Avatar;
 
 // src/avatar/piece.tsx
-import * as React21 from "react";
-import { useState as useState3, useEffect as useEffect3 } from "react";
+var React21 = __toESM(require("react"), 1);
+var import_react9 = require("react");
 var PieceComponent = (props) => {
   const { pieceSize, pieceType, style, viewBox } = props;
-  const [uid, setUid] = useState3("error");
-  useEffect3(() => {
+  const [uid, setUid] = (0, import_react9.useState)("error");
+  (0, import_react9.useEffect)(() => {
     setUid(uniqueId("avatar-"));
   }, []);
   return /* @__PURE__ */ React21.createElement(
@@ -12121,7 +12188,7 @@ function addPaletteColor(palette, name, color) {
 }
 var AvatarComponent = (props) => {
   const { style, className, uid, animationDelay, animated } = props;
-  const optionContext = useMemo2(() => new OptionContext(allOptions), []);
+  const optionContext = (0, import_react10.useMemo)(() => new OptionContext(allOptions), []);
   const data = {};
   for (const option of allOptions) {
     const value = props[option.key];
@@ -12144,7 +12211,7 @@ var AvatarComponent = (props) => {
 var index_default = AvatarComponent;
 var Piece = (props) => {
   const { style, pieceType, pieceSize, viewBox } = props;
-  const optionContext = useMemo2(() => new OptionContext(allOptions), []);
+  const optionContext = (0, import_react10.useMemo)(() => new OptionContext(allOptions), []);
   const data = {};
   for (const option of allOptions) {
     const value = props[option.key];
@@ -12640,9 +12707,10 @@ function getAvatarConfigFromHash(hash) {
   });
   return config;
 }
-export {
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
   ACCESSORIES_TYPES,
-  avatar_default as Avatar,
+  Avatar,
   AvatarComponent,
   BACKDROP_COLORS,
   BACKDROP_TYPES,
@@ -12667,7 +12735,6 @@ export {
   TOP_TYPES,
   addPaletteColor,
   allOptions,
-  index_default as default,
   generateRandomAvataarProps,
   getAvatarConfigFromHash,
   getAvatarHash,
@@ -12676,5 +12743,5 @@ export {
   registerGradient,
   registeredGradients,
   removePaletteColor
-};
-//# sourceMappingURL=index.js.map
+});
+//# sourceMappingURL=index.cjs.map
