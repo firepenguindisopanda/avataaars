@@ -52,6 +52,9 @@ declare class OptionContext {
     setData(data: {
         [index: string]: string;
     }): void;
+    setDataDuringRender(data: {
+        [index: string]: string;
+    }): void;
     setDefaultValue(key: string, defaultValue: string): void;
     setOptions(key: string, options: Array<string>): void;
     private setState;

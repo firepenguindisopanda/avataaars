@@ -107,6 +107,22 @@ var OptionContext = class {
     this._data = data;
     this.notifyListener();
   }
+  // Assign the data without notifying listeners.
+  //
+  // Safe to call during render, which `setData` is not: notifying runs each
+  // Selector's forceUpdate (a setState) while the calling component is still
+  // rendering, which React reports as "Cannot update a component (Selector)
+  // while rendering a different component (AvatarComponent)".
+  //
+  // Skipping the notification loses nothing here. Every Selector reads its
+  // value through `getValue()` during its own render, and each one is a
+  // descendant of the component that sets the data, so they re-render in the
+  // same pass and observe `_data` already updated. The listeners exist for
+  // changes that originate outside a render of that subtree -- optionEnter,
+  // optionExit, setDefaultValue, setOptions -- and those all still notify.
+  setDataDuringRender(data) {
+    this._data = data;
+  }
   setDefaultValue(key, defaultValue) {
     const optionState = this.getOptionState(key);
     this.setState({
@@ -12129,7 +12145,7 @@ var AvatarComponent = (props) => {
       data[option.key] = value;
     }
   }
-  optionContext.setData(data);
+  optionContext.setDataDuringRender(data);
   return /* @__PURE__ */ React22.createElement(OptionsContext.Provider, { value: optionContext }, /* @__PURE__ */ React22.createElement(
     avatar_default,
     {
@@ -12152,7 +12168,7 @@ var Piece = (props) => {
       data[option.key] = value;
     }
   }
-  optionContext.setData(data);
+  optionContext.setDataDuringRender(data);
   return /* @__PURE__ */ React22.createElement(OptionsContext.Provider, { value: optionContext }, /* @__PURE__ */ React22.createElement(
     piece_default,
     {

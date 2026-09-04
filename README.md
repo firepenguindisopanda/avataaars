@@ -4,12 +4,48 @@ The core React component for [Avataaars Generator](https://avataaars2.com/).
 
 **Provenance.** This package is a fork of [`@gschoppe/avataaars`](https://github.com/gschoppe/avataaars) by [Greg Schoppe](https://gschoppe.com), which is itself a fork of the original React port by [Fang-Pen Lin](https://github.com/fangpenlin/avataaars), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley). Maintained with the intentions of utilizing it in a future project. MIT, with all upstream copyright notices retained - see `LICENSE`.
 
+## Relationship to `@gschoppe/avataaars`
+
+**This is a personal fork, published only so that I can depend on a version I
+control. It is not a continuation of, competitor to, or successor to
+[`@gschoppe/avataaars`](https://github.com/gschoppe/avataaars), and I am not
+attempting to take over that development.** Greg Schoppe's package is the
+actively maintained one, and if you are choosing between them you should
+probably use his.
+
+Because of that, please send things upstream rather than here:
+
+- **Bugs and feature requests for the avataaars component itself** ->
+  [gschoppe/avataaars/issues](https://github.com/gschoppe/avataaars/issues)
+- **Pull requests** -> upstream too, where everyone benefits from them
+- Issues on this repo are limited to the small set of changes listed below
+
+### What this fork changes
+
+Everything else is Greg's work, unmodified.
+
+| Change | Why |
+|---|---|
+| Dual **ESM + CJS** build (`tsup` replacing `tsc`) with an `exports` map | The published output used extensionless and directory import specifiers, which are not resolvable under real ESM |
+| React peer range widened to `^17 \|\| ^18 \|\| ^19` | The source only uses `createContext`, `useMemo`, `useState`, `useEffect` -- all React 16.8+ |
+| Restored the four `Selector` default options to their upstream `avataaars@2.0.0` values (`facialHair`, `accessories`, `top`, `skin`) | The demo-oriented defaults put a beard and glasses on any `Piece` that did not explicitly pass those options |
+| Option data is assigned during render without notifying listeners | Removes React's "Cannot update a component while rendering a different component" warning |
+
+### What this fork does not maintain
+
+**The CSS idle animations are inherited as-is and are not being developed
+here.** I do not use them and will not be extending them to the remaining
+components. That work continues upstream -- please direct animation issues and
+contributions to [gschoppe/avataaars](https://github.com/gschoppe/avataaars).
+The feature is documented below because it ships with the package and still
+works exactly as it does upstream.
+
 <p align="center"><img src='avataaars-example.png?raw=true' style='width: 300px; height: 300px;' /></p>
 
 ## Features
 
-- **NEW** Idle CSS animations
-- **NEW** Extendable color palettes
+- Idle CSS animations *(inherited from `@gschoppe/avataaars`; not maintained here)*
+- Extendable color palettes *(inherited from `@gschoppe/avataaars`)*
 - SVG based
 - Light weight
 - Scalable
@@ -175,6 +211,11 @@ addPaletteColor(PALETTES.BACKDROP, 'BlueGlow', {
 ### BETA - Add CSS Idle Animations
 
 <p align="center"><img src='animation-example.gif?raw=true' style='max-width: 80%;height:auto;' /></p>
+
+> **Inherited feature, not maintained in this fork.** The animations come from
+> [`@gschoppe/avataaars`](https://github.com/gschoppe/avataaars) and are
+> documented here only because they ship with the package. I am not extending
+> them -- please take animation issues and contributions upstream.
 
 This is very much a work in progress. So far, Idle animations have only been added
 to a few of the various avatar components. To enable these animations, just

@@ -105,7 +105,9 @@ export const AvatarComponent: React.FC<Props> = (props) => {
       data[option.key] = value
     }
   }
-  optionContext.setData(data)
+  // Assign during render; notifying here would setState on mounted Selectors
+  // mid-render. They re-render as descendants and read the new data anyway.
+  optionContext.setDataDuringRender(data)
 
   return (
     <OptionsContext.Provider value={optionContext}>
@@ -133,7 +135,9 @@ export const Piece: React.FC<Props> = (props) => {
       data[option.key] = value
     }
   }
-  optionContext.setData(data)
+  // Assign during render; notifying here would setState on mounted Selectors
+  // mid-render. They re-render as descendants and read the new data anyway.
+  optionContext.setDataDuringRender(data)
 
   return (
     <OptionsContext.Provider value={optionContext}>
