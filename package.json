@@ -1,6 +1,6 @@
 {
   "name": "@firepenguindisopanda/avataaars",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "type": "module",
   "description": "React avataaars component. Fork of @gschoppe/avataaars, itself a fork of fangpenlin/avataaars, maintained for the OzzyPie project with Caribbean skin tones and styling.",
   "keywords": [

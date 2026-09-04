@@ -43,7 +43,7 @@ makeSkinColor('Black', '#614335')
 export default class Skin extends React.Component<Props> {
   render() {
     return (
-      <Selector option={SkinOption} defaultOption='Tanned'>
+      <Selector option={SkinOption} defaultOption='Light'>
         {Array.from(skinColorPalette.values()).map((ColorComponent, index) => (
           <ColorComponent key={index} uid={this.props.uid} />
         ))}

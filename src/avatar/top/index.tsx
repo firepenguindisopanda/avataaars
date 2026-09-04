@@ -47,7 +47,7 @@ export interface Props {
 export default class Top extends React.Component<Props> {
   render () {
     return (
-      <Selector defaultOption={ShortHairShortFlat} option={TopOption}>
+      <Selector defaultOption={LongHairStraight} option={TopOption}>
         <NoHair uid={this.props.uid}>{this.props.children}</NoHair>
         <Eyepatch uid={this.props.uid}>{this.props.children}</Eyepatch>
         <Hat uid={this.props.uid}>{this.props.children}</Hat>
