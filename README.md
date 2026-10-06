@@ -452,3 +452,25 @@ The flag shirts (`TrinidadAndTobagoShirt`, `JamaicaShirt`) are printed in their 
 To build your own custom avatar editor (like the sandbox page in the demo folder), use the lower level `Avatar` component wrapped in the `OptionContext`.
 
 For fully working references on dynamic forms, randomizers, and color/gradient palette managers, check out the source code in `demo/src/App.tsx`.
+
+## Smoke test
+
+`scripts/smoke-test.mjs` checks that the built package renders real SVG for the default `Avatar` export and for `Piece` (mouth, eyes, top, clothe and skin). It prints `ALL PASS` or exits with an error.
+
+Run it against a packed install of the package, not a `file:` link. With a `file:` link, `dist/index.js` resolves `react` from this repo instead of from the consumer, which gives two copies of React and a misleading "Invalid hook call" error.
+
+From the repo root:
+
+```bash
+npm run build
+mkdir -p ../avataaars-smoke
+npm pack --pack-destination ../avataaars-smoke
+cp scripts/smoke-test.mjs ../avataaars-smoke/
+cd ../avataaars-smoke
+npm init -y
+npm pkg set type=module
+npm install react@19 react-dom@19 ./firepenguindisopanda-avataaars-*.tgz
+node smoke-test.mjs
+```
+
+Element ids render as `error-*` in this test. That is expected: the real ids are assigned in a `useEffect`, and effects do not run during server rendering.
