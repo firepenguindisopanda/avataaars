@@ -13,6 +13,8 @@ const Prescription02 = makeOptionComponent('ACCESSORIES', 'Prescription02')
 const Round = makeOptionComponent('ACCESSORIES', 'Round')
 const Sunglasses = makeOptionComponent('ACCESSORIES', 'Sunglasses')
 const Wayfarers = makeOptionComponent('ACCESSORIES', 'Wayfarers')
+const TrinidadAndTobagoSunglasses = makeOptionComponent('ACCESSORIES', 'TrinidadAndTobagoSunglasses')
+const JamaicaSunglasses = makeOptionComponent('ACCESSORIES', 'JamaicaSunglasses')
 
 export interface Props {
   uid: string
@@ -29,6 +31,8 @@ export default class Accessories extends React.Component<Props> {
         <Round uid={this.props.uid} />
         <Sunglasses uid={this.props.uid} />
         <Wayfarers uid={this.props.uid} />
+        <TrinidadAndTobagoSunglasses uid={this.props.uid} />
+        <JamaicaSunglasses uid={this.props.uid} />
       </Selector>
     )
   }

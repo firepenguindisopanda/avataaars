@@ -27,15 +27,16 @@ Everything else is Greg's work, unmodified.
 | Change | Why |
 |---|---|
 | Dual **ESM + CJS** build (`tsup` replacing `tsc`) with an `exports` map | The published output used extensionless and directory import specifiers, which are not resolvable under real ESM |
-| React peer range widened to `^17 \|\| ^18 \|\| ^19` | The source only uses `createContext`, `useMemo`, `useState`, `useEffect` -- all React 16.8+ |
+| React peer range widened to `^17 \|\| ^18 \|\| ^19` | The source only uses `createContext`, `useMemo`, `useState`, `useEffect`, all available since React 16.8 |
 | Restored the four `Selector` default options to their upstream `avataaars@2.0.0` values (`facialHair`, `accessories`, `top`, `skin`) | The demo-oriented defaults put a beard and glasses on any `Piece` that did not explicitly pass those options |
 | Option data is assigned during render without notifying listeners | Removes React's "Cannot update a component while rendering a different component" warning |
+| Added Trinidad & Tobago and Jamaica items: flag shirts (`clotheType`), Steelpan / national bird / flag badge prints (`graphicType`), flag sunglasses (`accessoriesType`), `JamaicaTam` and `CarnivalHeadpiece` (`topType`) | Caribbean collection |
 
 ### What this fork does not maintain
 
 **The CSS idle animations are inherited as-is and are not being developed
 here.** I do not use them and will not be extending them to the remaining
-components. That work continues upstream -- please direct animation issues and
+components. That work continues upstream, so please direct animation issues and
 contributions to [gschoppe/avataaars](https://github.com/gschoppe/avataaars).
 The feature is documented below because it ships with the package and still
 works exactly as it does upstream.
@@ -215,7 +216,7 @@ addPaletteColor(PALETTES.BACKDROP, 'BlueGlow', {
 > **Inherited feature, not maintained in this fork.** The animations come from
 > [`@gschoppe/avataaars`](https://github.com/gschoppe/avataaars) and are
 > documented here only because they ship with the package. I am not extending
-> them -- please take animation issues and contributions upstream.
+> them. Please take animation issues and contributions upstream.
 
 This is very much a work in progress. So far, Idle animations have only been added
 to a few of the various avatar components. To enable these animations, just
@@ -340,6 +341,9 @@ Here are all the available component properties, option values, and representati
 | `ShortHairShortFlat`    | ![ShortHairShortFlat](docs/icons/top/ShortHairShortFlat.svg)       | `ShortHairShortRound`        | ![ShortHairShortRound](docs/icons/top/ShortHairShortRound.svg)               |
 | `ShortHairShortWaved`   | ![ShortHairShortWaved](docs/icons/top/ShortHairShortWaved.svg)     | `ShortHairSides`             | ![ShortHairSides](docs/icons/top/ShortHairSides.svg)                         |
 | `ShortHairTheCaesar`    | ![ShortHairTheCaesar](docs/icons/top/ShortHairTheCaesar.svg)       | `ShortHairTheCaesarSidePart` | ![ShortHairTheCaesarSidePart](docs/icons/top/ShortHairTheCaesarSidePart.svg) |
+| `JamaicaTam`            | ![JamaicaTam](docs/icons/top/JamaicaTam.svg)                       | `CarnivalHeadpiece`          | ![CarnivalHeadpiece](docs/icons/top/CarnivalHeadpiece.svg)                   |
+
+`JamaicaTam` (Jamaica) and `CarnivalHeadpiece` (Trinidad & Tobago) use fixed flag colors, so `hatColor` and `hairColor` have no effect on them.
 
 #### Hair Colors (`hairColor` & `facialHairColor`)
 
@@ -370,6 +374,9 @@ Here are all the available component properties, option values, and representati
 | `BlazerShirt`   | ![BlazerShirt](docs/icons/clothe/BlazerShirt.svg)     | `BlazerSweater`  | ![BlazerSweater](docs/icons/clothe/BlazerSweater.svg)   | `CollarSweater` | ![CollarSweater](docs/icons/clothe/CollarSweater.svg) |
 | `GraphicShirt`  | ![GraphicShirt](docs/icons/clothe/GraphicShirt.svg)   | `Hoodie`         | ![Hoodie](docs/icons/clothe/Hoodie.svg)                 | `Overall`       | ![Overall](docs/icons/clothe/Overall.svg)             |
 | `ShirtCrewNeck` | ![ShirtCrewNeck](docs/icons/clothe/ShirtCrewNeck.svg) | `ShirtScoopNeck` | ![ShirtScoopNeck](docs/icons/clothe/ShirtScoopNeck.svg) | `ShirtVNeck`    | ![ShirtVNeck](docs/icons/clothe/ShirtVNeck.svg)       |
+| `TrinidadAndTobagoShirt` | ![TrinidadAndTobagoShirt](docs/icons/clothe/TrinidadAndTobagoShirt.svg) | `JamaicaShirt` | ![JamaicaShirt](docs/icons/clothe/JamaicaShirt.svg) | | |
+
+The flag shirts (`TrinidadAndTobagoShirt`, `JamaicaShirt`) are printed in their flag's colors, so `clotheColor` has no effect on them.
 
 #### Graphic Print (`graphicType` - used with `GraphicShirt` Clothing)
 
@@ -378,7 +385,10 @@ Here are all the available component properties, option values, and representati
 | `Bat`          | ![Bat](docs/icons/graphics/Bat.svg)                   | `Cumbia` | ![Cumbia](docs/icons/graphics/Cumbia.svg) | `Deer`  | ![Deer](docs/icons/graphics/Deer.svg)   |
 | `Diamond`      | ![Diamond](docs/icons/graphics/Diamond.svg)           | `Hola`   | ![Hola](docs/icons/graphics/Hola.svg)     | `Pizza` | ![Pizza](docs/icons/graphics/Pizza.svg) |
 | `Resist`       | ![Resist](docs/icons/graphics/Resist.svg)             | `Selena` | ![Selena](docs/icons/graphics/Selena.svg) | `Skull` | ![Skull](docs/icons/graphics/Skull.svg) |
-| `SkullOutline` | ![SkullOutline](docs/icons/graphics/SkullOutline.svg) |          |                                           |         |                                         |
+| `SkullOutline` | ![SkullOutline](docs/icons/graphics/SkullOutline.svg) | `Steelpan` | ![Steelpan](docs/icons/graphics/Steelpan.svg) | `ScarletIbis` | ![ScarletIbis](docs/icons/graphics/ScarletIbis.svg) |
+| `DoctorBird`   | ![DoctorBird](docs/icons/graphics/DoctorBird.svg)     | `TrinidadAndTobagoBadge` | ![TrinidadAndTobagoBadge](docs/icons/graphics/TrinidadAndTobagoBadge.svg) | `JamaicaBadge` | ![JamaicaBadge](docs/icons/graphics/JamaicaBadge.svg) |
+
+`Steelpan` (T&T's national instrument), `ScarletIbis` (T&T national bird), `DoctorBird` (Jamaica's national bird) and the two flag badges are printed in full color rather than white.
 
 ---
 
@@ -388,7 +398,7 @@ Here are all the available component properties, option values, and representati
 | ---------------- | ------------------------------------------------------------ | ------- | ------------------------------------------ | ---------------- | ------------------------------------------------------------ |
 | `Blank`          | _(None)_                                                     | `Kurt`  | ![Kurt](docs/icons/accessories/Kurt.svg)   | `Prescription01` | ![Prescription01](docs/icons/accessories/Prescription01.svg) |
 | `Prescription02` | ![Prescription02](docs/icons/accessories/Prescription02.svg) | `Round` | ![Round](docs/icons/accessories/Round.svg) | `Sunglasses`     | ![Sunglasses](docs/icons/accessories/Sunglasses.svg)         |
-| `Wayfarers`      | ![Wayfarers](docs/icons/accessories/Wayfarers.svg)           |         |                                            |                  |                                                              |
+| `Wayfarers`      | ![Wayfarers](docs/icons/accessories/Wayfarers.svg)           | `TrinidadAndTobagoSunglasses` | ![TrinidadAndTobagoSunglasses](docs/icons/accessories/TrinidadAndTobagoSunglasses.svg) | `JamaicaSunglasses` | ![JamaicaSunglasses](docs/icons/accessories/JamaicaSunglasses.svg) |
 
 ---
 

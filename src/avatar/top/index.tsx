@@ -38,6 +38,8 @@ const WinterHat1 = makeOptionComponent('TOP', 'WinterHat1')
 const WinterHat2 = makeOptionComponent('TOP', 'WinterHat2')
 const WinterHat3 = makeOptionComponent('TOP', 'WinterHat3')
 const WinterHat4 = makeOptionComponent('TOP', 'WinterHat4')
+const JamaicaTam = makeOptionComponent('TOP', 'JamaicaTam')
+const CarnivalHeadpiece = makeOptionComponent('TOP', 'CarnivalHeadpiece')
 
 export interface Props {
   uid: string
@@ -57,6 +59,8 @@ export default class Top extends React.Component<Props> {
         <WinterHat2 uid={this.props.uid}>{this.props.children}</WinterHat2>
         <WinterHat3 uid={this.props.uid}>{this.props.children}</WinterHat3>
         <WinterHat4 uid={this.props.uid}>{this.props.children}</WinterHat4>
+        <JamaicaTam uid={this.props.uid}>{this.props.children}</JamaicaTam>
+        <CarnivalHeadpiece uid={this.props.uid}>{this.props.children}</CarnivalHeadpiece>
         <LongHairBigHair uid={this.props.uid}>{this.props.children}</LongHairBigHair>
         <LongHairBob uid={this.props.uid}>{this.props.children}</LongHairBob>
         <LongHairBun uid={this.props.uid}>{this.props.children}</LongHairBun>

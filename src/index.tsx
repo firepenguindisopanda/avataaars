@@ -105,8 +105,6 @@ export const AvatarComponent: React.FC<Props> = (props) => {
       data[option.key] = value
     }
   }
-  // Assign during render; notifying here would setState on mounted Selectors
-  // mid-render. They re-render as descendants and read the new data anyway.
   optionContext.setDataDuringRender(data)
 
   return (
@@ -135,8 +133,6 @@ export const Piece: React.FC<Props> = (props) => {
       data[option.key] = value
     }
   }
-  // Assign during render; notifying here would setState on mounted Selectors
-  // mid-render. They re-render as descendants and read the new data anyway.
   optionContext.setDataDuringRender(data)
 
   return (
@@ -217,7 +213,8 @@ export const TOP_TYPES = [
   'LongHairStraight2', 'LongHairStraightStrand',
   'ShortHairDreads01', 'ShortHairDreads02', 'ShortHairFrizzle', 'ShortHairShaggy',
   'ShortHairShaggyMullet', 'ShortHairShortCurly', 'ShortHairShortFlat', 'ShortHairShortRound',
-  'ShortHairShortWaved', 'ShortHairSides', 'ShortHairTheCaesar', 'ShortHairTheCaesarSidePart'
+  'ShortHairShortWaved', 'ShortHairSides', 'ShortHairTheCaesar', 'ShortHairTheCaesarSidePart',
+  'JamaicaTam', 'CarnivalHeadpiece'
 ]
 
 export const HAIR_COLORS = [
@@ -236,7 +233,8 @@ export const FACIAL_HAIR_COLORS = [...HAIR_COLORS]
 
 export const CLOTHE_TYPES = [
   'BlazerShirt', 'BlazerSweater', 'CollarSweater', 'GraphicShirt',
-  'Hoodie', 'Overall', 'ShirtCrewNeck', 'ShirtScoopNeck', 'ShirtVNeck'
+  'Hoodie', 'Overall', 'ShirtCrewNeck', 'ShirtScoopNeck', 'ShirtVNeck',
+  'TrinidadAndTobagoShirt', 'JamaicaShirt'
 ]
 
 export const CLOTHE_COLORS = [
@@ -247,12 +245,14 @@ export const CLOTHE_COLORS = [
 
 export const ACCESSORIES_TYPES = [
   'Blank', 'Kurt', 'Prescription01', 'Prescription02', 'Round',
-  'Sunglasses', 'Wayfarers'
+  'Sunglasses', 'Wayfarers',
+  'TrinidadAndTobagoSunglasses', 'JamaicaSunglasses'
 ]
 
 export const GRAPHIC_TYPES = [
   'Bat', 'Cumbia', 'Deer', 'Diamond', 'Hola', 'Pizza',
-  'Resist', 'Selena', 'Skull', 'SkullOutline'
+  'Resist', 'Selena', 'Skull', 'SkullOutline',
+  'Steelpan', 'ScarletIbis', 'DoctorBird', 'TrinidadAndTobagoBadge', 'JamaicaBadge'
 ]
 
 export const EYE_TYPES = [

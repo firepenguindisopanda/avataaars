@@ -11,6 +11,8 @@ const Overall = makeOptionComponent('CLOTHES', 'Overall')
 const ShirtCrewNeck = makeOptionComponent('CLOTHES', 'ShirtCrewNeck')
 const ShirtScoopNeck = makeOptionComponent('CLOTHES', 'ShirtScoopNeck')
 const ShirtVNeck = makeOptionComponent('CLOTHES', 'ShirtVNeck')
+const TrinidadAndTobagoShirt = makeOptionComponent('CLOTHES', 'TrinidadAndTobagoShirt')
+const JamaicaShirt = makeOptionComponent('CLOTHES', 'JamaicaShirt')
 
 export interface Props {
   uid: string
@@ -29,6 +31,8 @@ export default class Clothes extends React.Component<Props> {
         <ShirtCrewNeck uid={this.props.uid} />
         <ShirtScoopNeck uid={this.props.uid} />
         <ShirtVNeck uid={this.props.uid} />
+        <TrinidadAndTobagoShirt uid={this.props.uid} />
+        <JamaicaShirt uid={this.props.uid} />
       </Selector>
     )
   }
