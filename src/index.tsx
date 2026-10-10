@@ -246,13 +246,15 @@ export const CLOTHE_COLORS = [
 export const ACCESSORIES_TYPES = [
   'Blank', 'Kurt', 'Prescription01', 'Prescription02', 'Round',
   'Sunglasses', 'Wayfarers',
-  'TrinidadAndTobagoSunglasses', 'JamaicaSunglasses'
+  'TrinidadAndTobagoSunglasses', 'JamaicaSunglasses',
+  'CarnivalMask'
 ]
 
 export const GRAPHIC_TYPES = [
   'Bat', 'Cumbia', 'Deer', 'Diamond', 'Hola', 'Pizza',
   'Resist', 'Selena', 'Skull', 'SkullOutline',
-  'Steelpan', 'ScarletIbis', 'DoctorBird', 'TrinidadAndTobagoBadge', 'JamaicaBadge'
+  'Steelpan', 'ScarletIbis', 'DoctorBird', 'TrinidadAndTobagoBadge', 'JamaicaBadge',
+  'Anansi', 'Cocrico', 'Ackee'
 ]
 
 export const EYE_TYPES = [

@@ -9,6 +9,8 @@ const cases = [
   ['Piece:top', h(Piece, { pieceType: 'top', pieceSize: '100', topType: 'LongHairFro', hairColor: 'Red' })],
   ['Piece:clothe', h(Piece, { pieceType: 'clothe', pieceSize: '100', clotheType: 'Hoodie', clotheColor: 'Red' })],
   ['Piece:skin', h(Piece, { pieceType: 'skin', pieceSize: '100', skinColor: 'Brown' })],
+  ['Piece:graphics', h(Piece, { pieceType: 'graphics', pieceSize: '100', graphicType: 'Anansi' })],
+  ['Piece:accessories', h(Piece, { pieceType: 'accessories', pieceSize: '100', accessoriesType: 'CarnivalMask' })],
 ]
 
 let failed = 0

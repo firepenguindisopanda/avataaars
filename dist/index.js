@@ -351,9 +351,10 @@ var Sunglasses = makeOptionComponent("ACCESSORIES", "Sunglasses");
 var Wayfarers = makeOptionComponent("ACCESSORIES", "Wayfarers");
 var TrinidadAndTobagoSunglasses = makeOptionComponent("ACCESSORIES", "TrinidadAndTobagoSunglasses");
 var JamaicaSunglasses = makeOptionComponent("ACCESSORIES", "JamaicaSunglasses");
+var CarnivalMask = makeOptionComponent("ACCESSORIES", "CarnivalMask");
 var Accessories = class extends React4.Component {
   render() {
-    return /* @__PURE__ */ React4.createElement(Selector_default, { defaultOption: Blank2, option: AccessoriesOption }, /* @__PURE__ */ React4.createElement(Blank2, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Kurt, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Prescription01, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Prescription02, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Round, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Sunglasses, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Wayfarers, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(TrinidadAndTobagoSunglasses, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(JamaicaSunglasses, { uid: this.props.uid }));
+    return /* @__PURE__ */ React4.createElement(Selector_default, { defaultOption: Blank2, option: AccessoriesOption }, /* @__PURE__ */ React4.createElement(Blank2, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Kurt, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Prescription01, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Prescription02, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Round, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Sunglasses, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(Wayfarers, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(TrinidadAndTobagoSunglasses, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(JamaicaSunglasses, { uid: this.props.uid }), /* @__PURE__ */ React4.createElement(CarnivalMask, { uid: this.props.uid }));
   }
 };
 
@@ -551,9 +552,12 @@ var ScarletIbis = makeOptionComponent("CLOTHES", "ScarletIbis");
 var DoctorBird = makeOptionComponent("CLOTHES", "DoctorBird");
 var TrinidadAndTobagoBadge = makeOptionComponent("CLOTHES", "TrinidadAndTobagoBadge");
 var JamaicaBadge = makeOptionComponent("CLOTHES", "JamaicaBadge");
+var Anansi = makeOptionComponent("CLOTHES", "Anansi");
+var Cocrico = makeOptionComponent("CLOTHES", "Cocrico");
+var Ackee = makeOptionComponent("CLOTHES", "Ackee");
 var Graphics = class extends React9.Component {
   render() {
-    return /* @__PURE__ */ React9.createElement(Selector_default, { option: GraphicOption, defaultOption: Skull }, /* @__PURE__ */ React9.createElement(Bat, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Cumbia, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Deer, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Diamond, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Hola, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Pizza, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Resist, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Selena, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Bear, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(SkullOutline, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Skull, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Steelpan, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(ScarletIbis, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(DoctorBird, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(TrinidadAndTobagoBadge, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(JamaicaBadge, { uid: this.props.uid }));
+    return /* @__PURE__ */ React9.createElement(Selector_default, { option: GraphicOption, defaultOption: Skull }, /* @__PURE__ */ React9.createElement(Bat, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Cumbia, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Deer, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Diamond, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Hola, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Pizza, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Resist, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Selena, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Bear, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(SkullOutline, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Skull, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Steelpan, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(ScarletIbis, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(DoctorBird, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(TrinidadAndTobagoBadge, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(JamaicaBadge, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Anansi, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Cocrico, { uid: this.props.uid }), /* @__PURE__ */ React9.createElement(Ackee, { uid: this.props.uid }));
   }
 };
 
@@ -3049,6 +3053,757 @@ var SVG_DICTIONARY = {
                 "strokeWidth": "3"
               },
               "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "Anansi": {
+      "type": "g",
+      "props": {
+        "id": "{uid}-Clothing/Graphic/Anansi",
+        "mask": "url(#{uid}-Clothing-Color-Mask)",
+        "fillRule": "evenodd"
+      },
+      "children": [
+        {
+          "type": "g",
+          "props": {
+            "transform": "translate(132 82) scale(1.15) translate(-132 -80)"
+          },
+          "children": [
+            {
+              "type": "g",
+              "props": {},
+              "children": [
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M123,74 Q111,61 103,65 L99,71",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M123,74 Q111,61 103,65 L99,71",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M141.0,74 Q153.0,61 161.0,65 L165.0,71",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M141.0,74 Q153.0,61 161.0,65 L165.0,71",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M122,78 Q109,72 100,76 L97,82",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M122,78 Q109,72 100,76 L97,82",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M142.0,78 Q155.0,72 164.0,76 L167.0,82",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M142.0,78 Q155.0,72 164.0,76 L167.0,82",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M122,83 Q109,85 101,89 L100,96",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M122,83 Q109,85 101,89 L100,96",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M142.0,83 Q155.0,85 163.0,89 L164.0,96",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M142.0,83 Q155.0,85 163.0,89 L164.0,96",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "132",
+                    "cy": "80",
+                    "rx": "12.5",
+                    "ry": "12.5",
+                    "fill": "#1B1B1B"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "127.5",
+                    "cy": "76",
+                    "r": "4",
+                    "fill": "#FFF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "136.5",
+                    "cy": "76",
+                    "r": "4",
+                    "fill": "#FFF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "128.2",
+                    "cy": "77.2",
+                    "r": "2",
+                    "fill": "#1B1B1B"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "137.2",
+                    "cy": "77.2",
+                    "r": "2",
+                    "fill": "#1B1B1B"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "127.6",
+                    "cy": "76.5",
+                    "r": ".7",
+                    "fill": "#FFF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "136.6",
+                    "cy": "76.5",
+                    "r": ".7",
+                    "fill": "#FFF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M128,83.6 Q132,86.6 136,83.6",
+                    "fill": "none",
+                    "stroke": "#FFF",
+                    "strokeWidth": "1.4",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M117.5,94 L132,96.5 L146.5,94 L146.5,104 L132,106 L117.5,104 Z",
+                    "fill": "#C8102E"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M119.5,93.5 Q126,91.5 132,95 L132,104 Q126,100.5 119.5,102.5 Z",
+                    "fill": "#FFF8E7"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M144.5,93.5 Q138,91.5 132,95 L132,104 Q138,100.5 144.5,102.5 Z",
+                    "fill": "#FFF8E7"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M122,96 L129,97.5 M122,98.6 L129,100 M135,97.5 L142,96 M135,100 L142,98.6",
+                    "stroke": "#9AA3AE",
+                    "strokeWidth": ".8"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M125,88 Q119,92 120,97",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M125,88 Q119,92 120,97",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M139.0,88 Q145.0,92 144.0,97",
+                    "fill": "none",
+                    "stroke": "#1B1B1B",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M139.0,88 Q145.0,92 144.0,97",
+                    "fill": "none",
+                    "stroke": "#FED100",
+                    "strokeWidth": "3",
+                    "strokeDasharray": "2 3.2",
+                    "strokeDashoffset": "-2"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Cocrico": {
+      "type": "g",
+      "props": {
+        "id": "{uid}-Clothing/Graphic/Cocrico",
+        "mask": "url(#{uid}-Clothing-Color-Mask)",
+        "fillRule": "evenodd"
+      },
+      "children": [
+        {
+          "type": "g",
+          "props": {
+            "transform": "translate(132 85) scale(1) translate(-132 -80)"
+          },
+          "children": [
+            {
+              "type": "g",
+              "props": {},
+              "children": [
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M104,97 Q132,93 162,98",
+                    "fill": "none",
+                    "stroke": "#6B4423",
+                    "strokeWidth": "3",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "111",
+                    "cy": "94",
+                    "rx": "5.5",
+                    "ry": "2.3",
+                    "transform": "rotate(-30 111 94)",
+                    "fill": "#2E8B3D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "153",
+                    "cy": "94.5",
+                    "rx": "4.5",
+                    "ry": "2",
+                    "transform": "rotate(28 153 94.5)",
+                    "fill": "#3FA34D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M133,86 L157,101 L153,106 L130,91 Z",
+                    "fill": "#B5651D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M133,86 L151,97.3 L147.6,101.6 L130,91 Z",
+                    "fill": "#3A2E28"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "130",
+                    "cy": "79",
+                    "rx": "9",
+                    "ry": "14",
+                    "transform": "rotate(18 130 79)",
+                    "fill": "#7A5A36"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "126.5",
+                    "cy": "84",
+                    "rx": "5.8",
+                    "ry": "9",
+                    "transform": "rotate(18 126.5 84)",
+                    "fill": "#C9955B"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "134",
+                    "cy": "78",
+                    "rx": "6",
+                    "ry": "11",
+                    "transform": "rotate(22 134 78)",
+                    "fill": "#5E4429"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M124,69 Q119.5,63 120,57 L125,57.5 Q125,63 129.5,68 Z",
+                    "fill": "#76726E"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "121.5",
+                    "cy": "55",
+                    "r": "5.2",
+                    "fill": "#76726E"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M116.6,54.2 L111.6,56 L116.8,57.6 Z",
+                    "fill": "#E8E1CF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "120.6",
+                    "cy": "53.8",
+                    "r": "1.25",
+                    "fill": "#111"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "121",
+                    "cy": "53.4",
+                    "r": ".42",
+                    "fill": "#FFF"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M117.5,58.6 Q119,62.8 122.6,61 Q120.6,60 120.2,58.2 Z",
+                    "fill": "#D7263D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M127,91 L126.4,96 M131.5,91.5 L131.8,96",
+                    "stroke": "#8E8A86",
+                    "strokeWidth": "1.7",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Ackee": {
+      "type": "g",
+      "props": {
+        "id": "{uid}-Clothing/Graphic/Ackee",
+        "mask": "url(#{uid}-Clothing-Color-Mask)",
+        "fillRule": "evenodd"
+      },
+      "children": [
+        {
+          "type": "g",
+          "props": {
+            "transform": "translate(132 82) scale(1.2) translate(-132 -80)"
+          },
+          "children": [
+            {
+              "type": "g",
+              "props": {},
+              "children": [
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M118,58 Q121,61 121,64",
+                    "fill": "none",
+                    "stroke": "#6B4423",
+                    "strokeWidth": "2",
+                    "strokeLinecap": "round"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "110",
+                    "cy": "62",
+                    "rx": "9",
+                    "ry": "3.6",
+                    "transform": "rotate(-25 110 62)",
+                    "fill": "#2E8B3D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "ellipse",
+                  "props": {
+                    "cx": "160",
+                    "cy": "62",
+                    "rx": "8.5",
+                    "ry": "3.4",
+                    "transform": "rotate(25 160 62)",
+                    "fill": "#3FA34D"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M121,63 C129,63 132,73 130,82 C128.5,89 125,93 121,93 C117,93 113.5,89 112,82 C110,73 113,63 121,63 Z",
+                    "fill": "#C8341F"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "path",
+                  "props": {
+                    "d": "M121,64 L121,92 M115.5,67 Q113.5,80 117,91",
+                    "fill": "none",
+                    "stroke": "#8E1F12",
+                    "strokeOpacity": ".55",
+                    "strokeWidth": ".9"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "g",
+                  "props": {
+                    "transform": "rotate(0 137 84)"
+                  },
+                  "children": [
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C130,80 128,68 137,62 C146,68 144,80 137,84 Z",
+                        "fill": "#E2412F"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C141,78 143,70 137,62 C140.5,70 140,78 137,84 Z",
+                        "fill": "#000",
+                        "fillOpacity": "0.14"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,82 C133,78 132.5,71 137,67.5 C141.5,71 141,78 137,82 Z",
+                        "fill": "#F7E3A1"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "circle",
+                      "props": {
+                        "cx": "137",
+                        "cy": "67",
+                        "r": "4.2",
+                        "fill": "#141414"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "ellipse",
+                      "props": {
+                        "cx": "135.7",
+                        "cy": "65.6",
+                        "rx": "1.3",
+                        "ry": ".8",
+                        "fill": "#FFF",
+                        "fillOpacity": ".8"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "g",
+                  "props": {
+                    "transform": "rotate(120 137 84)"
+                  },
+                  "children": [
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C130,80 128,68 137,62 C146,68 144,80 137,84 Z",
+                        "fill": "#E2412F"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C141,78 143,70 137,62 C140.5,70 140,78 137,84 Z",
+                        "fill": "#000",
+                        "fillOpacity": "0.14"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,82 C133,78 132.5,71 137,67.5 C141.5,71 141,78 137,82 Z",
+                        "fill": "#F7E3A1"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "circle",
+                      "props": {
+                        "cx": "137",
+                        "cy": "67",
+                        "r": "4.2",
+                        "fill": "#141414"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "ellipse",
+                      "props": {
+                        "cx": "135.7",
+                        "cy": "65.6",
+                        "rx": "1.3",
+                        "ry": ".8",
+                        "fill": "#FFF",
+                        "fillOpacity": ".8"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "g",
+                  "props": {
+                    "transform": "rotate(240 137 84)"
+                  },
+                  "children": [
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C130,80 128,68 137,62 C146,68 144,80 137,84 Z",
+                        "fill": "#E2412F"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,84 C141,78 143,70 137,62 C140.5,70 140,78 137,84 Z",
+                        "fill": "#000",
+                        "fillOpacity": "0.14"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "path",
+                      "props": {
+                        "d": "M137,82 C133,78 132.5,71 137,67.5 C141.5,71 141,78 137,82 Z",
+                        "fill": "#F7E3A1"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "circle",
+                      "props": {
+                        "cx": "137",
+                        "cy": "67",
+                        "r": "4.2",
+                        "fill": "#141414"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "ellipse",
+                      "props": {
+                        "cx": "135.7",
+                        "cy": "65.6",
+                        "rx": "1.3",
+                        "ry": ".8",
+                        "fill": "#FFF",
+                        "fillOpacity": ".8"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "circle",
+                  "props": {
+                    "cx": "137",
+                    "cy": "84",
+                    "r": "2.6",
+                    "fill": "#B32418"
+                  },
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -6537,6 +7292,322 @@ var SVG_DICTIONARY = {
                 "id": "{uid}-Frame-Mid",
                 "fill": "#FED100",
                 "fillRule": "nonzero"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "CarnivalMask": {
+      "type": "g",
+      "props": {
+        "id": "{uid}-Top/Accessories/Carnival-Mask",
+        "transform": "translate(62.000000, 85.000000)",
+        "strokeWidth": "1"
+      },
+      "children": [
+        {
+          "type": "g",
+          "props": {},
+          "children": [
+            {
+              "type": "path",
+              "props": {
+                "d": "M15,8 C3,-4 -3,-17 1,-27 C10,-18 16,-6 15,8 Z",
+                "fill": "#D7263D"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M15,7 C8,-4 3,-15 1,-26",
+                "fill": "none",
+                "stroke": "#000",
+                "strokeOpacity": ".25",
+                "strokeWidth": ".9"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M19,6 C14,-7 13,-21 18,-31 C24,-20 24,-6 19,6 Z",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M19,5 C17,-8 17,-20 18,-30",
+                "fill": "none",
+                "stroke": "#000",
+                "strokeOpacity": ".25",
+                "strokeWidth": ".9"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M23,6 C25,-7 30,-18 38,-24 C38,-12 32,-2 23,6 Z",
+                "fill": "#E0218A"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M23,5 C27,-6 32,-16 37,-23",
+                "fill": "none",
+                "stroke": "#000",
+                "strokeOpacity": ".25",
+                "strokeWidth": ".9"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M71,9 C58,4 40,0 25,3.5 C13,6.5 6.5,14 8,22 C9.5,30 19,36 31,36 C43,36 53,32.5 61,30.5 C65.5,29.4 68.5,27.6 71,27 C73.5,27.6 76.5,29.4 81,30.5 C89,32.5 99,36 111,36 C123,36 132.5,30 134,22 C135.5,14 129,6.5 117,3.5 C102,0 84,4 71,9 Z M33,19 C37,11.5 53,11.5 57,19 C53,25.5 37,25.5 33,19 Z M85,19 C89,11.5 105,11.5 109,19 C105,25.5 89,25.5 85,19 Z",
+                "fill": "#F2B705",
+                "fillRule": "evenodd",
+                "stroke": "#A87400",
+                "strokeWidth": "1.2"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M24,8 C36,4 54,4 66,11",
+                "fill": "none",
+                "stroke": "#FFF",
+                "strokeOpacity": ".45",
+                "strokeWidth": "1.6",
+                "strokeLinecap": "round"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "16",
+                "cy": "12",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "126",
+                "cy": "12",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "12",
+                "cy": "20",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "130",
+                "cy": "20",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "15",
+                "cy": "28",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "127",
+                "cy": "28",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "24",
+                "cy": "33",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "118",
+                "cy": "33",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "36",
+                "cy": "32.5",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "106",
+                "cy": "32.5",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "52",
+                "cy": "29",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "90",
+                "cy": "29",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "24",
+                "cy": "7",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "118",
+                "cy": "7",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "38",
+                "cy": "5",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "104",
+                "cy": "5",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "54",
+                "cy": "6.5",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "88",
+                "cy": "6.5",
+                "r": "1.3",
+                "fill": "#1FB5C2"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "64",
+                "cy": "9.5",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "circle",
+              "props": {
+                "cx": "78",
+                "cy": "9.5",
+                "r": "1.3",
+                "fill": "#FFFFFF"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M71,3.5 L74.8,9.5 L71,15.5 L67.2,9.5 Z",
+                "fill": "#D7263D",
+                "stroke": "#8E0F1E",
+                "strokeWidth": ".8"
+              },
+              "children": []
+            },
+            {
+              "type": "path",
+              "props": {
+                "d": "M70,6.5 L71,5 L72,6.5",
+                "fill": "none",
+                "stroke": "#FFF",
+                "strokeWidth": ".8"
               },
               "children": []
             }
@@ -14789,7 +15860,8 @@ var ACCESSORIES_TYPES = [
   "Sunglasses",
   "Wayfarers",
   "TrinidadAndTobagoSunglasses",
-  "JamaicaSunglasses"
+  "JamaicaSunglasses",
+  "CarnivalMask"
 ];
 var GRAPHIC_TYPES = [
   "Bat",
@@ -14806,7 +15878,10 @@ var GRAPHIC_TYPES = [
   "ScarletIbis",
   "DoctorBird",
   "TrinidadAndTobagoBadge",
-  "JamaicaBadge"
+  "JamaicaBadge",
+  "Anansi",
+  "Cocrico",
+  "Ackee"
 ];
 var EYE_TYPES = [
   "Close",

@@ -18,6 +18,9 @@ export const ScarletIbis = makeOptionComponent('CLOTHES', 'ScarletIbis')
 export const DoctorBird = makeOptionComponent('CLOTHES', 'DoctorBird')
 export const TrinidadAndTobagoBadge = makeOptionComponent('CLOTHES', 'TrinidadAndTobagoBadge')
 export const JamaicaBadge = makeOptionComponent('CLOTHES', 'JamaicaBadge')
+export const Anansi = makeOptionComponent('CLOTHES', 'Anansi')
+export const Cocrico = makeOptionComponent('CLOTHES', 'Cocrico')
+export const Ackee = makeOptionComponent('CLOTHES', 'Ackee')
 
 export interface Props {
   uid: string
@@ -43,6 +46,9 @@ export default class Graphics extends React.Component<Props> {
         <DoctorBird uid={this.props.uid} />
         <TrinidadAndTobagoBadge uid={this.props.uid} />
         <JamaicaBadge uid={this.props.uid} />
+        <Anansi uid={this.props.uid} />
+        <Cocrico uid={this.props.uid} />
+        <Ackee uid={this.props.uid} />
       </Selector>
     )
   }

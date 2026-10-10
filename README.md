@@ -30,7 +30,7 @@ Everything else is Greg's work, unmodified.
 | React peer range widened to `^17 \|\| ^18 \|\| ^19` | The source only uses `createContext`, `useMemo`, `useState`, `useEffect`, all available since React 16.8 |
 | Restored the four `Selector` default options to their upstream `avataaars@2.0.0` values (`facialHair`, `accessories`, `top`, `skin`) | The demo-oriented defaults put a beard and glasses on any `Piece` that did not explicitly pass those options |
 | Option data is assigned during render without notifying listeners | Removes React's "Cannot update a component while rendering a different component" warning |
-| Added Trinidad & Tobago and Jamaica items: flag shirts (`clotheType`), Steelpan / national bird / flag badge prints (`graphicType`), flag sunglasses (`accessoriesType`), `JamaicaTam` and `CarnivalHeadpiece` (`topType`) | Caribbean collection |
+| Added Trinidad & Tobago and Jamaica items: flag shirts (`clotheType`), Steelpan / national bird / flag badge / Anansi / Cocrico / Ackee prints (`graphicType`), flag sunglasses and a Carnival mask (`accessoriesType`), `JamaicaTam` and `CarnivalHeadpiece` (`topType`) | Caribbean collection |
 
 ### What this fork does not maintain
 
@@ -387,8 +387,9 @@ The flag shirts (`TrinidadAndTobagoShirt`, `JamaicaShirt`) are printed in their 
 | `Resist`       | ![Resist](docs/icons/graphics/Resist.svg)             | `Selena` | ![Selena](docs/icons/graphics/Selena.svg) | `Skull` | ![Skull](docs/icons/graphics/Skull.svg) |
 | `SkullOutline` | ![SkullOutline](docs/icons/graphics/SkullOutline.svg) | `Steelpan` | ![Steelpan](docs/icons/graphics/Steelpan.svg) | `ScarletIbis` | ![ScarletIbis](docs/icons/graphics/ScarletIbis.svg) |
 | `DoctorBird`   | ![DoctorBird](docs/icons/graphics/DoctorBird.svg)     | `TrinidadAndTobagoBadge` | ![TrinidadAndTobagoBadge](docs/icons/graphics/TrinidadAndTobagoBadge.svg) | `JamaicaBadge` | ![JamaicaBadge](docs/icons/graphics/JamaicaBadge.svg) |
+| `Anansi`       | ![Anansi](docs/icons/graphics/Anansi.svg)             | `Cocrico` | ![Cocrico](docs/icons/graphics/Cocrico.svg) | `Ackee` | ![Ackee](docs/icons/graphics/Ackee.svg) |
 
-`Steelpan` (T&T's national instrument), `ScarletIbis` (T&T national bird), `DoctorBird` (Jamaica's national bird) and the two flag badges are printed in full color rather than white.
+`Steelpan` (T&T's national instrument), `ScarletIbis` (T&T national bird), `DoctorBird` (Jamaica's national bird), the two flag badges, `Anansi` (the spider of Caribbean folk tales, with a book), `Cocrico` (T&T's other national bird) and `Ackee` (Jamaica's national fruit) are printed in full color rather than white.
 
 ---
 
@@ -399,6 +400,9 @@ The flag shirts (`TrinidadAndTobagoShirt`, `JamaicaShirt`) are printed in their 
 | `Blank`          | _(None)_                                                     | `Kurt`  | ![Kurt](docs/icons/accessories/Kurt.svg)   | `Prescription01` | ![Prescription01](docs/icons/accessories/Prescription01.svg) |
 | `Prescription02` | ![Prescription02](docs/icons/accessories/Prescription02.svg) | `Round` | ![Round](docs/icons/accessories/Round.svg) | `Sunglasses`     | ![Sunglasses](docs/icons/accessories/Sunglasses.svg)         |
 | `Wayfarers`      | ![Wayfarers](docs/icons/accessories/Wayfarers.svg)           | `TrinidadAndTobagoSunglasses` | ![TrinidadAndTobagoSunglasses](docs/icons/accessories/TrinidadAndTobagoSunglasses.svg) | `JamaicaSunglasses` | ![JamaicaSunglasses](docs/icons/accessories/JamaicaSunglasses.svg) |
+| `CarnivalMask`   | ![CarnivalMask](docs/icons/accessories/CarnivalMask.svg)     | | | | |
+
+`CarnivalMask` is a gold domino mask with feathers, in the old Trinidad Carnival style. Its colors are fixed.
 
 ---
 
