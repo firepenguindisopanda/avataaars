@@ -1,6 +1,6 @@
 {
   "name": "@firepenguindisopanda/avataaars",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "type": "module",
   "description": "React component for avataaars. Fork of @gschoppe/avataaars with upstream-compatible default options and a dual ESM/CJS build.",
   "keywords": [
