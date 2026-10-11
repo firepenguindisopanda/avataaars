@@ -7303,7 +7303,7 @@ var SVG_DICTIONARY = {
       "type": "g",
       "props": {
         "id": "{uid}-Top/Accessories/Carnival-Mask",
-        "transform": "translate(62.000000, 85.000000)",
+        "transform": "translate(62.000000, 93.000000)",
         "strokeWidth": "1"
       },
       "children": [
